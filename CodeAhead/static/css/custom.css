@@ -1,0 +1,75 @@
+/* Custom styles to complement Bootstrap dark theme */
+:root {
+    --accent-color: #e50914;
+    --text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Smooth scroll behavior */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Hero section styles */
+.hero-section {
+    min-height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+                url('https://images.unsplash.com/photo-1471341971476-ae15ff5dd4ea');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.hero-text {
+    text-shadow: var(--text-shadow);
+}
+
+/* Video card hover effects */
+.video-card {
+    transition: transform 0.3s ease;
+}
+
+.video-card:hover {
+    transform: scale(1.05);
+}
+
+/* Team member card styles */
+.team-member-card {
+    background: rgba(33, 37, 41, 0.8);
+    backdrop-filter: blur(10px);
+}
+
+/* Portfolio grid */
+.portfolio-item {
+    position: relative;
+    overflow: hidden;
+}
+
+.portfolio-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.portfolio-item:hover .portfolio-overlay {
+    opacity: 1;
+}
+
+/* Custom accent color */
+.accent-color {
+    color: var(--accent-color);
+}
+
+/* Loading animation */
+.loading {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.loaded {
+    opacity: 1;
+}
